@@ -12,10 +12,10 @@ https://docs.nativescript.org/ui/components.
   
     <StackLayout class="p-20">
         
-        <Label text="Hello" class="h2 text-center" textWrap="true"/>
+        <Label text="Classify the following elements:" class="h2 text-center" textWrap="true"/>
         <ListView items="{{items}}" itemTap="{{ selectItem }}"  row="0"></ListView>
         <Label text="Are you PRO peanut butter (hint: just mention peanut butter)" class="h2 text-center" textWrap="true"/>
-        <TextField text="{{something}}" />
+        <TextField text="{{inputStr}}" />
        
         <Button text="Submit" tap="{{ onTap }}" class="-primary"/>
 

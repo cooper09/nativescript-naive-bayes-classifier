@@ -2,14 +2,6 @@ const Observable = require("@nativescript/core").Observable;
 
 const natural = require('natural');
 
-function getMessage(counter) {
-    if (counter <= 0) {
-        return "Hoorraaay! You unlocked the NativeScript clicker achievement!";
-    } else {
-        return `${counter} taps left`;
-    }
-}
-
 function createViewModel() {
     const viewModel = new Observable();
 
@@ -17,17 +9,12 @@ function createViewModel() {
     "I'll have a burger and fries","Peanut butter is my favorite food"]
 
     viewModel.item = 0;
-    viewModel.something ='Testme';
-
-   // viewModel.counter = 42;
-    viewModel.message = getMessage(viewModel.something);
+    viewModel.inputStr ='TEst';
 
     viewModel.onTap = () => {
-        let str = viewModel.something;
+        let str = viewModel.inputStr;
         makePrediction(str)
-       // viewModel.counter--;
-       // viewModel.set("message", getMessage(viewModel.counter));
-    };
+    };//end onTap
 
     viewModel.selectItem = (e) => {
         console.log("Item Selected: ", e.index);

@@ -20,10 +20,9 @@ exports.onNavigatingTo = onNavigatingTo;
 
 exports.myFunction = args =>{
     console.log("MyFunction: ", args.object );
-   // alert("MyFunction: " + args.object.something );
     const page = args.object;
     page.bindingContext = {
-        something:"Yowsa"
+     //   something:"Yowsa"
     };
 }//end MyFunction
 
