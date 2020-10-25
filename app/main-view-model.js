@@ -13,18 +13,20 @@ function getMessage(counter) {
 function createViewModel() {
     const viewModel = new Observable();
 
-    viewModel.items = ["These are the times to try Men's souls",
-    "Kiss My Black Ass","Half a League, half a league, half a league forward!"]
+    viewModel.items = ["I can't go a day without peanut butter",
+    "I'll have a burger and fries","Peanut butter is my favorite food"]
 
     viewModel.item = 0;
-    viewModel.something ='';
+    viewModel.something ='Testme';
 
    // viewModel.counter = 42;
     viewModel.message = getMessage(viewModel.something);
 
     viewModel.onTap = () => {
-        viewModel.counter--;
-        viewModel.set("message", getMessage(viewModel.counter));
+        let str = viewModel.something;
+        makePrediction(str)
+       // viewModel.counter--;
+       // viewModel.set("message", getMessage(viewModel.counter));
     };
 
     viewModel.selectItem = (e) => {
@@ -43,16 +45,13 @@ const testfunc =(num) =>{
 
     switch (num){
         case 0:
-            alert("sentence 1")
-            sentence = "These are the times to try Men's souls"
+            sentence = "I can't go a day without peanut butter"
         break
         case 1:
-            alert("sentence 2")
-            sentence = "Kiss My Black Ass";
+            sentence = "I'll have a burger and fries";
         break;
         case 2:
-            alert("sentence 3");
-            sentence = "Half a League, half a league, half a league forward!";
+            sentence = "Peanut butter is my favorite food";
         break;
     }//end switch
     console.log("sentence to categorize: ", sentence )
@@ -64,13 +63,33 @@ const testfunc =(num) =>{
     classifier.addDocument("biscuits and jelly","false")
     classifier.addDocument("I love creamy spreads","true")
     classifier.addDocument("How about fish and chips","false")
-
+    classifier.addDocument("Burgers are fattening","false")
+    classifier.addDocument("Fries are bad for you..","false")
     //Train
     classifier.train();
 
        //Predict
-       console.log("I predict: " + classifier.classify(sentence));
+       alert("I predict you selected pro peanut butter: " + classifier.classify(sentence));
 
 }//end testfunc 
 
+const makePrediction = (string) =>{
+    console.log("makePrediction: ", string );
+    const classifier = new natural.BayesClassifier();
+
+    //Training Data
+    classifier.addDocument("I love peanut butter","true")
+    classifier.addDocument("biscuits and jelly","false")
+    classifier.addDocument("I love creamy spreads","true")
+    classifier.addDocument("How about fish and chips","false")
+    classifier.addDocument("Burgers are fattening","false")
+    classifier.addDocument("Fries are bad for you..","false")
+    //Train
+    classifier.train();
+
+       //Predict
+       alert("I predict you selected pro peanut butter: " + classifier.classify(string));
+
+
+}//end makePrediction
 exports.createViewModel = createViewModel;

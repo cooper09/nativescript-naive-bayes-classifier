@@ -7,13 +7,17 @@ https://docs.nativescript.org/ui/components.
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
   
     <Page.ActionBar>
-     <ActionBar title="My App" icon=""></ActionBar>
+     <ActionBar title="Simple Naive-Bayes Classifier" icon=""></ActionBar>
     </Page.ActionBar>
   
     <StackLayout class="p-20">
         
         <Label text="Hello" class="h2 text-center" textWrap="true"/>
         <ListView items="{{items}}" itemTap="{{ selectItem }}"  row="0"></ListView>
-        <Label text="{{item}}" class="h2 text-center" textWrap="true"/>
+        <Label text="Are you PRO peanut butter (hint: just mention peanut butter)" class="h2 text-center" textWrap="true"/>
+        <TextField text="{{something}}" />
+       
+        <Button text="Submit" tap="{{ onTap }}" class="-primary"/>
+
     </StackLayout>
 </Page>
