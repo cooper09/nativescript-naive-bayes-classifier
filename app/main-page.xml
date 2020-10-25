@@ -14,10 +14,12 @@ https://docs.nativescript.org/ui/components.
         
         <Label text="Classify the following elements:" class="h2 text-center" textWrap="true"/>
         <ListView items="{{items}}" itemTap="{{ selectItem }}"  row="0"></ListView>
+
         <Label text="Are you PRO peanut butter (hint: just mention peanut butter)" class="h2 text-center" textWrap="true"/>
         <TextField text="{{inputStr}}" />
        
         <Button text="Submit" tap="{{ onTap }}" class="-primary"/>
-
+            <Button text="Next Page" tap="nextPage" class="-primary" />
     </StackLayout>
+
 </Page>

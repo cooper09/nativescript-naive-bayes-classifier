@@ -9,7 +9,7 @@ function createViewModel() {
     "I'll have a burger and fries","Peanut butter is my favorite food"]
 
     viewModel.item = 0;
-    viewModel.inputStr ='TEst';
+    viewModel.inputStr ='';
 
     viewModel.onTap = () => {
         let str = viewModel.inputStr;

@@ -1,0 +1,6 @@
+<Page>
+    <StackLayout>
+    <Label text="Second Page" class="h2 text-center" textWrap="true"/>
+    <Button text="Go Back" tap="lastPage" class="-primary" />
+    </StackLayout>
+</Page>
