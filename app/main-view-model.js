@@ -56,8 +56,8 @@ const testfunc =(num) =>{
     classifier.train();
 
        //Predict
-       alert("I predict you selected pro peanut butter: " + classifier.classify(sentence));
-
+       alert("I predict you selected pro peanut butter: \n]n" + classifier.classify(sentence) + " \n\n (We're using a pretty small data set, so take the results with a grain of salt)");
+     
 }//end testfunc 
 
 const makePrediction = (string) =>{
@@ -74,8 +74,8 @@ const makePrediction = (string) =>{
     //Train
     classifier.train();
 
-       //Predict
-       alert("I predict you selected pro peanut butter: " + classifier.classify(string));
+       //Predict 
+       alert("I predict you selected pro peanut butter: \n\n" + classifier.classify(string) + " \n\n (We're using a pretty small data set, so take the results with a grain of salt)");
 
 
 }//end makePrediction
