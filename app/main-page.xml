@@ -16,10 +16,10 @@ https://docs.nativescript.org/ui/components.
         <ListView items="{{items}}" itemTap="{{ selectItem }}"  row="0"></ListView>
 
         <Label text="Are you PRO peanut butter (hint: just mention peanut butter)" class="h2 text-center" textWrap="true"/>
-        <TextField text="{{inputStr}}" />
+        <TextField hint="Enter sentence using keyboard" text="{{inputStr}}" />
        
         <Button text="Submit" tap="{{ onTap }}" class="-primary"/>
-            <Button text="Next Page" tap="nextPage" class="-primary" />
+        <Button text="Next Page" tap="nextPage" class="-primary" />
     </StackLayout>
 
 </Page>
